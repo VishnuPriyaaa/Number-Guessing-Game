@@ -41,12 +41,15 @@ def start_game():
             elif user_input < num:
                 print("It's higher")
             else:
-                break
+                print("You got it in {} attempts".format(num_attempts))
+                play_again = input("Do you want to play again \n Type Y/y - Play Again: ")
+                if play_again.lower() == "y":
+                    num_attempts = 0
+                else:
+                    break
         except ValueError:
             print("Please enter valid number between 1 and 10")
-
-    print("You got it in {} attempts".format(num_attempts))
-    print("---- Hope you had fun playing the game. Keep trying again and again ----")
+    print("---- Hope you had fun playing the game. Keep playing and have fun!!! ----")
 
 
 # Kick off the program by calling the start_game function.
